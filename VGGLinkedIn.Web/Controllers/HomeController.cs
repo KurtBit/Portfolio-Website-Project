@@ -1,6 +1,11 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using Glimpse.Core.Extensions;
+using Microsoft.Ajax.Utilities;
 using VGGLinkedIn.Data;
+using VGGLinkedIn.Web.Models;
 
 namespace VGGLinkedIn.Web.Controllers
 {
@@ -11,10 +16,24 @@ namespace VGGLinkedIn.Web.Controllers
         {
         }
 
+        IVggLinkedInContext context = new VggLinkedInContext();
         private const int PostsPerPage = 3;
 
         public ActionResult Index()
         {
+            var posts = context.Post;
+            if (posts != null)
+            {
+                IEnumerable<PostViewModel> model = posts.Select(x => new PostViewModel()
+                {
+                    Content = x.Content,
+                    CreatedAt = x.CreatedAt,
+                    Title = x.Title
+                });
+
+                return this.View(model);
+            }
+
             return this.View();
         }
 

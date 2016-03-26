@@ -14,6 +14,6 @@ namespace VGGLinkedIn.Web.InputModels
 
         public DateTime CreatedAt { get; set; }
 
-        public string Tag { get; set; }
+        public string Slug { get; set; }
     }
 }

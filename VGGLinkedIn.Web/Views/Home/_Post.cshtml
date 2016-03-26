@@ -1,11 +1,12 @@
-﻿<section class="blog-post">
+﻿@model VGGLinkedIn.Web.Models.PostViewModel
+
+<section class="blog-post">
     <header>
-        <h2>Epic Title Here</h2>
-        <i class="glyphicon glyphicon-calendar"></i><span class="posted">Posted at: 22/12/2015</span>
+        <h2>@Model.Title</h2>
+        <span><i class="glyphicon glyphicon-calendar"></i>Posted at: @Model.CreatedAt</span>
     </header>
     <article>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur numquam rem debitis expedita veniam fugiat praesentium vero iusto aperiam, placeat reprehenderit, odio accusantium quae. Quos qui explicabo ullam commodi!
-        Quasi beatae eligendi quod nulla quo id, voluptatem, nihil ipsa ut quae adipisci sequi veritatis accusantium est. Temporibus, reiciendis at omnis, excepturi rerum tempora. Aliquam saepe perferendis minima, ratione quas..
+       @Model.Content
     </article>
     <footer class="clearfix">
         <i class="ion-pricetag"></i>

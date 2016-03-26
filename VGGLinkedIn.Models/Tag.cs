@@ -8,9 +8,11 @@ namespace VGGLinkedIn.Models
 {
     public class Tag
     {
-        public virtual int Id { get; set; }
-        public virtual string Slug { get; set; }
-        public virtual string Name { get; set; }
+        public  int Id { get; set; }
+        public  string Slug { get; set; }
+        //public int PostId { get; set; }
+        //public virtual Post Post { get; set; }
+        //public  string Name { get; set; }
 
     }
 }

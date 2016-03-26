@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VGGLinkedIn.Models
 {
     public class Post
     {
-        private ICollection<Tag> _tags;
+        //private ICollection<Tag> _tags;
 
-        public Post()
-        {
-            _tags = new HashSet<Tag>();
-        }
+        //public Post()
+        //{
+        //    _tags = new HashSet<Tag>();
+        //}
 
         public int Id { get; set; }
 
@@ -24,13 +25,14 @@ namespace VGGLinkedIn.Models
 
         public bool IsDeleted { get { return DeletedAt != null; } }
 
-        public int UserId { get; set; }
+        [ForeignKey("User")]
+        public string UserId { get; set; }
         public virtual User User { get; set; }
 
-        public virtual ICollection<Tag> Tags
-        {
-            get { return this._tags; }
-            set { this._tags = value; }
-        }
+        //public virtual ICollection<Tag> Tags
+        //{
+        //    get { return this._tags; }
+        //    set { this._tags = value; }
+        //}
     }
 }
