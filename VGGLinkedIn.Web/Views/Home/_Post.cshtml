@@ -1,0 +1,42 @@
+﻿<section class="blog-post">
+    <header>
+        <h2>Epic Title Here</h2>
+        <i class="glyphicon glyphicon-calendar"></i><span class="posted">Posted at: 22/12/2015</span>
+    </header>
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur numquam rem debitis expedita veniam fugiat praesentium vero iusto aperiam, placeat reprehenderit, odio accusantium quae. Quos qui explicabo ullam commodi!
+        Quasi beatae eligendi quod nulla quo id, voluptatem, nihil ipsa ut quae adipisci sequi veritatis accusantium est. Temporibus, reiciendis at omnis, excepturi rerum tempora. Aliquam saepe perferendis minima, ratione quas..
+    </article>
+    <footer class="clearfix">
+        <i class="ion-pricetag"></i>
+        <div class="tags">books, story, tags</div>
+        <div class="media">
+            <ul>
+                <li><a class="social" href="#"><i class="ion-social-linkedin"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-rss"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-facebook"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</section>
+
+@*@model SimpleBlog.Models.Post
+
+<article class="post">
+    <h1><a href="@Url.RouteUrl("Post", new { Model.Id, Model.Slug })">@Model.Title</a></h1>
+    <div>
+        @Html.Raw(Model.Content)
+    </div>
+    <footer>
+        <ul class="pull-right list-unstyled tags">
+            @foreach (var tag in Model.Tags)
+            {
+                <li>
+                    <a class="badge" href="@Url.RouteUrl("Tag", new { tag.Id, tag.Slug })">@tag.Name</a>
+                </li>
+            }
+        </ul>
+        Posted: @Model.CreatedAt
+    </footer>
+</article>*@
