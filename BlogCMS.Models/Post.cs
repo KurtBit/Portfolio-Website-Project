@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VGGLinkedIn.Models
+namespace BlogCMS.Models
 {
     public class Post
     {

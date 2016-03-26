@@ -1,4 +1,4 @@
-using VGGLinkedIn.Models;
+using BlogCMS.Models;
 
 namespace BlogCMS.Data
 {

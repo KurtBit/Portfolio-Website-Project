@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BlogCMS.Data;
-using VGGLinkedIn.Models;
+using BlogCMS.Models;
 
 namespace BlogCMS.Web.Controllers
 {

@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Claims;
-using System.Threading.Tasks;
 
-namespace VGGLinkedIn.Models
+namespace BlogCMS.Models
 {
     public class User
     {
