@@ -25,6 +25,7 @@ namespace BlogCMS.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/ionicons.min.css",
                       "~/Content/site.css"));
         }
     }

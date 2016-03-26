@@ -23,3 +23,139 @@ textarea {
     max-width: 280px;
 }
 
+/***** BLOG-POST *****/
+.blog-post {
+    width: 685px;
+    height: 350px;
+    margin: 35px 0 0 120px;
+    background-color: #fff;
+    color: rgb(135, 138, 137);
+    font-family: Arial, sans-serif;
+    border: 1px solid rgb(217, 217, 217);
+}
+
+.blog-post:first-child {
+    margin-top: 4%;
+}
+
+.blog-post header {
+    height: 20%;
+    border-bottom: 2px solid rgb(37, 232, 166);
+}
+
+.blog-post article {
+    height: 65%;
+    box-sizing: border-box;
+    padding: 30px;
+    overflow: scroll
+}
+
+.blog-post footer {
+    height: 15%;
+    background-color: rgb(51, 51, 51);
+    color: rgb(217, 217, 217);
+}
+
+h2 {
+    display: inline-block;
+    margin: 25px 0 20px 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+header i {
+    font-size: 2.5em;
+    margin: 0 5px 0 35%;
+}
+
+header span {
+    vertical-align: super;
+}
+
+footer i {
+    font-size: 1.8em;
+    vertical-align: sub;
+}
+
+.ion-pricetag {
+    margin: 0 8px 0 23px;
+    line-height: 52.5px;
+}
+
+footer .tags {
+    display: inline-block;
+}
+
+footer .media {
+    float: right;
+    list-style: none;
+    margin-right: 15px;
+}
+
+.media li{
+    display: inline-block;
+    margin-left: 7px;
+}
+
+.media li:last-child{
+    margin-right: 8px;
+}
+
+.social:link,
+.social:visited {
+    display: inline-block;
+    margin-top: 38%;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: rgb(217, 217, 217);
+    vertical-align: text-top;
+    line-height: 30px;
+    color: rgb(51, 51, 51);
+    font-size: 0.8em;
+}
+
+.media li:first-child .social:hover,
+.media li:first-child .social:active {
+    color: #007bb5;
+}
+
+.media li:nth-child(2) .social:hover,
+.media li:nth-child(2) .social:active {
+    color: #ff6600;
+}
+
+.media li:nth-child(3) .social:hover,
+.media li:nth-child(3) .social:active {
+    color: #55acee;
+}
+
+.media li:last-child .social:hover,
+.media li:last-child .social:active{
+    color: #3b5998;
+}
+
+.blog-change {
+    color: rgb(37, 232, 166);
+    margin-bottom: 1%;
+}
+
+.blog-change ul {
+    list-style: none;
+}
+
+.blog-change li {
+    display: inline-block;
+    font-size: 2em;
+    vertical-align: middle;
+    margin-left: 18.1%;
+    font-weight: 400;
+}
+
+.blog-change li:first-child {
+    margin-left: 9.5%;
+}
+
+.blog-change i {
+    font-size: 2em;
+}
