@@ -1,0 +1,24 @@
+﻿@model BlogCMS.Web.Models.PostViewModel
+
+<section class="blog-post">
+    <header>
+        <h2>@Model.Title</h2>
+        <span><i class="glyphicon glyphicon-calendar"></i>Posted at: @Model.CreatedAt</span>
+    </header>
+    <article>
+        @Model.Content
+    </article>
+    <footer class="clearfix">
+        <i class="ion-pricetag"></i>
+        <div class="tags">books, story, tags</div>
+        <div class="media">
+            <ul>
+                <li><a class="social" href="#"><i class="ion-social-linkedin"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-rss"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a class="social" href="#"><i class="ion-social-facebook"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</section>
+
