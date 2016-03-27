@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using BlogCMS.Data;
 using BlogCMS.Models;
 using BlogCMS.Web.Areas.Admin.InputModel;
+using BlogCMS.Web.Areas.Admin.Models;
+using Microsoft.AspNet.Identity;
 
 
 namespace BlogCMS.Web.Areas.Admin.Controllers
 {
+    //[Authorize(Roles = "admin")]
     public class PostsController : Controller
     {
         private BlogContext context = new BlogContext();
@@ -14,7 +19,19 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
         // GET: Admin/Posts
         public ActionResult Index()
         {
-            return View();
+            var posts = context.Posts;
+
+            IEnumerable<PostsIndexViewModel> model = posts.Select(x => new PostsIndexViewModel()
+            {
+                Author = x.User.Email,
+                Id = x.Id,
+                PostedAt = x.CreatedAt,
+                Tag = x.Slug,
+                Title = x.Title,
+                IsDeleted = x.IsDeleted
+            });
+
+            return View(model);
         }
 
         [HttpGet]
@@ -39,7 +56,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
                 CreatedAt = DateTime.Now,
                 Title = model.Title,
                 Slug = model.Slug,
-                UserId = 2 // not good
+                UserId = User.Identity.GetUserId()
             };
 
             context.Posts.Add(post);

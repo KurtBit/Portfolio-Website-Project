@@ -1,3 +1,4 @@
+using BlogCMS.Data.Migrations;
 using BlogCMS.Models;
 
 namespace BlogCMS.Data
@@ -12,6 +13,7 @@ namespace BlogCMS.Data
         public BlogContext()
             : base("name=BlogContext")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BlogContext, Configuration>());
         }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Tag> Tags { get; set; }
