@@ -1,12 +1,24 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/***** GENERAl *****/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block;}
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+body {
+    font-family: Oswald, sans-serif;
+    background-color: rgb(243, 243, 243);
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,6 +33,80 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/***** HEADER *****/
+header {
+    height: 83px;
+    overflow: hidden;
+}
+
+h1 {
+    margin-left: 200px;
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(242, 242, 242);
+    line-height: 93px;
+}
+
+nav {
+    font-size: 15px;
+    background-color: rgb(37, 232, 166)
+}
+
+nav > ul {
+    list-style: none;
+    display: inline-block;
+    float: right;
+    line-height: 140px;
+}
+
+nav li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 110px;
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    border-left: 2px solid rgb(217, 217, 217);
+    border-right: 2px solid #fff;
+    cursor: pointer;
+}
+
+nav li:first-of-type {
+    border-left: 2px solid rgb(217, 217, 217);
+    -webkit-box-shadow:0 0 0 2px #fff;
+    -ms-box-shadow:0 0 0 2px #fff;
+    box-shadow:0 0 0 2px #fff;
+}
+
+nav li:last-of-type {
+    margin-right: 200px;
+    border-right: 2px solid #fff;
+    -webkit-box-shadow:1px 0 0 1px rgb(217, 217, 217);
+    -ms-box-shadow:1px 0 0 1px rgb(217, 217, 217);
+    box-shadow:1px 0 0 1px rgb(217, 217, 217);
+}
+
+nav li a:link,
+nav li a:active,
+nav li a:hover,
+nav li a:visited {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: rgb(51, 249, 209);
+}
+
+.active {
+    background-color: rgb(24, 185, 110);
 }
 
 /***** BLOG-POST *****/
@@ -45,6 +131,8 @@ textarea {
 
 .blog-post article {
     height: 65%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 30px;
     overflow: scroll
@@ -158,4 +246,29 @@ footer .media {
 
 .blog-change i {
     font-size: 2em;
+}
+
+/***** FOOTER *****/
+.main-footer {
+    height: 130px;
+    width: 100%;
+    background-color: rgb(37, 232, 166);
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.main-footer span {
+    display: inline-block;
+    color: #fff;
+ }
+
+.main-footer span:first-child {
+    margin-top: 3%;
+}
+
+h4 {
+    display: inline;
+    font-weight: 600;
+    color: #000;
 }
