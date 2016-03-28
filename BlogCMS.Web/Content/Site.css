@@ -17,6 +17,7 @@
 .clearfix { display: block; }
 
 body {
+    font-size: 15px;
     font-family: Oswald, sans-serif;
     background-color: rgb(243, 243, 243);
 }
@@ -37,18 +38,18 @@ textarea {
 
 /***** HEADER *****/
 header {
-    height: 83px;
+    height: 93px;
     overflow: hidden;
 }
 
 h1 {
     margin-left: 200px;
+    line-height: 140%;
     display: inline-block;
     float: left;
     text-transform: uppercase;
     font-weight: 400;
     color: rgb(242, 242, 242);
-    line-height: 93px;
 }
 
 nav {
@@ -57,13 +58,14 @@ nav {
 }
 
 nav > ul {
+    font-size: 0;
     list-style: none;
-    display: inline-block;
     float: right;
-    line-height: 140px;
+    line-height: 93px;
 }
 
 nav li {
+    font-size: 15px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -78,16 +80,12 @@ nav li {
 
 nav li:first-of-type {
     border-left: 2px solid rgb(217, 217, 217);
-    -webkit-box-shadow:0 0 0 2px #fff;
-    -ms-box-shadow:0 0 0 2px #fff;
     box-shadow:0 0 0 2px #fff;
 }
 
 nav li:last-of-type {
     margin-right: 200px;
     border-right: 2px solid #fff;
-    -webkit-box-shadow:1px 0 0 1px rgb(217, 217, 217);
-    -ms-box-shadow:1px 0 0 1px rgb(217, 217, 217);
     box-shadow:1px 0 0 1px rgb(217, 217, 217);
 }
 
@@ -129,6 +127,12 @@ nav li:hover {
     border-bottom: 2px solid rgb(37, 232, 166);
 }
 
+.posted {
+    float: right;
+    margin-right: 3%;
+    margin-top: 10px;
+}
+
 .blog-post article {
     height: 65%;
     -webkit-box-sizing: border-box;
@@ -139,6 +143,9 @@ nav li:hover {
 }
 
 .blog-post footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     height: 15%;
     background-color: rgb(51, 51, 51);
     color: rgb(217, 217, 217);
@@ -153,7 +160,8 @@ h2 {
 
 header i {
     font-size: 2.5em;
-    margin: 0 5px 0 35%;
+    margin: 0 5px 0;
+    vertical-align: middle;
 }
 
 header span {
@@ -174,18 +182,18 @@ footer .tags {
     display: inline-block;
 }
 
-footer .media {
+footer .mymedia {
     float: right;
     list-style: none;
     margin-right: 15px;
 }
 
-.media li{
+.mymedia li{
     display: inline-block;
     margin-left: 7px;
 }
 
-.media li:last-child{
+.mymedia li:last-child{
     margin-right: 8px;
 }
 
@@ -203,23 +211,23 @@ footer .media {
     font-size: 0.8em;
 }
 
-.media li:first-child .social:hover,
-.media li:first-child .social:active {
+.mymedia li:first-child .social:hover,
+.mymedia li:first-child .social:active {
     color: #007bb5;
 }
 
-.media li:nth-child(2) .social:hover,
-.media li:nth-child(2) .social:active {
+.mymedia li:nth-child(2) .social:hover,
+.mymedia li:nth-child(2) .social:active {
     color: #ff6600;
 }
 
-.media li:nth-child(3) .social:hover,
-.media li:nth-child(3) .social:active {
+.mymedia li:nth-child(3) .social:hover,
+.mymedia li:nth-child(3) .social:active {
     color: #55acee;
 }
 
-.media li:last-child .social:hover,
-.media li:last-child .social:active{
+.mymedia li:last-child .social:hover,
+.mymedia li:last-child .social:active{
     color: #3b5998;
 }
 
