@@ -12,6 +12,6 @@ namespace BlogCMS.Web.Areas.Admin.Models
         public string Author { get; set; }
         public string Tag { get; set; }
         public DateTime PostedAt { get; set; }
-        public bool IsDeleted { get; set; }
+        public int IsDeleted { get; set; }
     }
 }

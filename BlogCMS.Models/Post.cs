@@ -14,7 +14,7 @@ namespace BlogCMS.Models
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
 
-        public bool IsDeleted { get { return DeletedAt != null; } }
+        public int IsDeleted { get; set; }
 
         public string UserId { get; set; }
         public virtual User User { get; set; }

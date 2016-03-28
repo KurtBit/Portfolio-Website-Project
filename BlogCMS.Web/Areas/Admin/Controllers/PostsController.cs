@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web.Mvc;
 using BlogCMS.Data;
@@ -11,12 +12,13 @@ using Microsoft.AspNet.Identity;
 
 namespace BlogCMS.Web.Areas.Admin.Controllers
 {
-    //[Authorize(Roles = "admin")]
+    [Authorize]
     public class PostsController : Controller
     {
         private BlogContext context = new BlogContext();
 
         // GET: Admin/Posts
+        [HttpGet]
         public ActionResult Index()
         {
             var posts = context.Posts;
@@ -56,7 +58,8 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
                 CreatedAt = DateTime.Now,
                 Title = model.Title,
                 Slug = model.Slug,
-                UserId = User.Identity.GetUserId()
+                UserId = User.Identity.GetUserId(),
+                IsDeleted = 0
             };
 
             context.Posts.Add(post);
@@ -65,9 +68,28 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
             return Content("Added Post Successfully");
         }
 
-        public ActionResult Edit()
+        public ActionResult Delete(int id)
         {
-            return View();
+            var post = context.Posts.FirstOrDefault(x => x.Id == id);
+
+            post.IsDeleted = 1;
+            post.DeletedAt = DateTime.Now;
+            context.Posts.AddOrUpdate(post);
+            context.SaveChanges();
+            
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Restore(int id)
+        {
+            var post = context.Posts.FirstOrDefault(x => x.Id == id);
+
+            post.IsDeleted = 0;
+            post.DeletedAt = DateTime.Now;
+            context.Posts.AddOrUpdate(post);
+            context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

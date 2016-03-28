@@ -39,7 +39,8 @@ namespace BlogCMS.Web.Controllers
                 {
                     Content = x.Content,
                     CreatedAt = x.CreatedAt,
-                    Title = x.Title
+                    Title = x.Title,
+                    isDeleted = x.IsDeleted
                 });
 
                 return this.View(model);

@@ -1,9 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -12,8 +10,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <header>
+        <ul class="nav nav-pills">
+            <li>
+               @Html.ActionLink("Posts", "Index", "Posts", new { area = "Admin" }, new { @class = "btn btn-default" })
+            </li>
+            <li>
+                @Html.ActionLink("New", "New", "Posts")
+            </li>
+            <li>
+                @Html.ActionLink("New", "New", "Posts")
+            </li>
+            <li class="pull-right">
+                @Html.ActionLink("Back to website", "Index", "Home", new { area = "" }, new { @class="btn btn-default" })
+            </li>
+        </ul>
+    </header>
     <div>
         @RenderBody()
     </div>
+    <footer>
+    
+    </footer>
 </body>
 </html>

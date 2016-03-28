@@ -457,7 +457,6 @@
     <Content Include="fonts\ionicons.eot" />
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
-    <None Include="Properties\PublishProfiles\ppavlov - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ppavlov - Web Deploy.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -508,6 +507,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Portfolio.cshtml" />
     <Content Include="Views\Home\_Post.cshtml" />
+    <Content Include="Views\Home\_AboutMe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
