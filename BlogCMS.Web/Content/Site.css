@@ -111,7 +111,6 @@ nav li:hover {
 .blog-post {
     width: 685px;
     height: 350px;
-    margin: 35px 0 0 120px;
     background-color: #fff;
     color: rgb(135, 138, 137);
     font-family: Arial, sans-serif;
@@ -139,7 +138,9 @@ nav li:hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 30px;
-    overflow: scroll
+    overflow: auto;
+    text-align: justify;
+    text-justify: kashida;
 }
 
 .blog-post footer {
@@ -254,6 +255,40 @@ footer .mymedia {
 
 .blog-change i {
     font-size: 2em;
+}
+
+
+/***** ASIDE *****/
+aside {
+    float: right;
+    margin-top: 28px;
+    width: 270px;
+    height: 385px;
+    text-align: center;
+    color: rgb(135, 138, 137);
+    background-color: #fff;
+    border: 1px solid rgb(217, 217, 217);
+}
+
+aside img {
+    margin-top: 5%;
+}
+
+aside span {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    padding: 4%;
+}
+
+.greeting {
+    font-size: 1.4em;
+}
+
+.author {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.3em;
 }
 
 /***** FOOTER *****/
