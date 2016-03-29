@@ -93,6 +93,7 @@ nav li a:link,
 nav li a:active,
 nav li a:hover,
 nav li a:visited {
+    display: block;
     font-size: 1.5em;
     text-transform: uppercase;
     color: #fff;
@@ -107,10 +108,17 @@ nav li:hover {
     background-color: rgb(24, 185, 110);
 }
 
+/***** HERO *****/
+#carousel-example-generic {
+    margin-top: 5%;
+    width: 1140px;
+}
+
 /***** BLOG-POST *****/
 .blog-post {
-    width: 685px;
+    width: 800px;
     height: 350px;
+    margin-top: 35px;
     background-color: #fff;
     color: rgb(135, 138, 137);
     font-family: Arial, sans-serif;
@@ -118,7 +126,7 @@ nav li:hover {
 }
 
 .blog-post:first-child {
-    margin-top: 4%;
+    margin-top: 5%;
 }
 
 .blog-post header {
@@ -140,7 +148,7 @@ nav li:hover {
     padding: 30px;
     overflow: auto;
     text-align: justify;
-    text-justify: kashida;
+    word-wrap: break-word;
 }
 
 .blog-post footer {
@@ -261,9 +269,9 @@ footer .mymedia {
 /***** ASIDE *****/
 aside {
     float: right;
-    margin-top: 28px;
-    width: 270px;
-    height: 385px;
+    margin-top: 38px;
+    width: 290px;
+    height: 386.5px;
     text-align: center;
     color: rgb(135, 138, 137);
     background-color: #fff;
@@ -272,6 +280,11 @@ aside {
 
 aside img {
     margin-top: 5%;
+    height: 35%;
+    width: 47%;
+    border: 2px solid #d9d9d9;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
 }
 
 aside span {

@@ -429,6 +429,8 @@
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="Content\ckeditor\styles.js" />
+    <Content Include="Content\images\Guzarisme1.jpg" />
+    <Content Include="Content\images\Idiiot.png" />
     <Content Include="Content\images\Omnifood.png" />
     <Content Include="Content\ionicons.min.css" />
     <Content Include="favicon.ico" />
