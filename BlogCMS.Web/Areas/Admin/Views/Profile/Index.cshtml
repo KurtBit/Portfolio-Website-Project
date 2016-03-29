@@ -1,0 +1,11 @@
+﻿@model BlogCMS.Web.Areas.Admin.InputModel.ProfileInputModel
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="form-group">
+            @Html.LabelFor(x=>x.AvatarUrl)
+            @Html.EditorFor(x=>x.AvatarUrl)
+            <input type="submit" value="Upload"/>
+        </div>
+    </div>
+</div>
