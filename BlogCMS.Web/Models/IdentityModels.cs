@@ -11,9 +11,21 @@ namespace BlogCMS.Web.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        //private ICollection<Post> _posts;
 
+        //public ApplicationUser()
+        //{
+        //    this._posts = new HashSet<Post>();
+        //}
 
+        //public string FullName { get; set; }
+        //public string AvatarUrl { get; set; }
 
+        //public virtual ICollection<Post> Posts
+        //{
+        //    get { return this._posts; }
+        //    set { this._posts = value; }
+        //}
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
