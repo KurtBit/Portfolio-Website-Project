@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using BlogCMS.Data;
 using BlogCMS.Models;
 using BlogCMS.Web.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BlogCMS.Web.Controllers
 {
@@ -15,23 +16,6 @@ namespace BlogCMS.Web.Controllers
 
         public ActionResult Index()
         {
-            //var User = new User()
-            //{
-            //    FullName = "Petromil Pavlov",
-            //};
-            //context.Users.Add(User);
-            //context.SaveChanges();
-
-            //var Post = new Post()
-            //{
-            //    Content = "bla",
-            //    CreatedAt = DateTime.Now,
-            //    Slug = "bla",
-            //    UserId = 1
-
-            //};
-            //context.Posts.Add(Post);
-            //context.SaveChanges();
             var posts = context.Posts;
             if (posts != null)
             {
@@ -45,6 +29,9 @@ namespace BlogCMS.Web.Controllers
 
                 return this.View(model);
             }
+            var user = context.Users.FirstOrDefault(x => x.IdentityId == User.Identity.GetUserId());
+
+            ViewData["AvatarUrl"] = user.AvatarUrl;
 
             return this.View();
             

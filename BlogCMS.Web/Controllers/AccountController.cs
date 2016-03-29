@@ -21,6 +21,7 @@ namespace BlogCMS.Web.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+
         public AccountController()
         {
         }
@@ -169,7 +170,8 @@ namespace BlogCMS.Web.Controllers
                     {
                         Email = model.Email,
                         Username = model.Email,
-                        Role = "user"
+                        Role = "user",
+                        //IdentityId = User.Identity.GetUserId()
                     };
                     context.Users.Add(newUser);
                     context.SaveChanges();
