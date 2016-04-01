@@ -435,6 +435,8 @@
     <Content Include="Content\images\Guzarisme1.jpg" />
     <Content Include="Content\images\Idiiot.png" />
     <Content Include="Content\images\Omnifood.png" />
+    <Content Include="Content\images\Project1.jpg" />
+    <Content Include="Content\images\Project2.jpg" />
     <Content Include="Content\ionicons.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
