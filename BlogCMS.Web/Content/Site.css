@@ -109,13 +109,20 @@ nav li:hover {
 }
 
 /***** HERO *****/
-#carousel-example-generic {
+#hero-carousel {
     margin-top: 5%;
 }
 
-#carousel-example-generic img {
+#hero-carousel img {
     width: 1140px;
     height: 300px;
+}
+
+#hero-carousel > a > img {
+    height: 38px;
+    width: 46px;
+    position: relative;
+    top: 45%
 }
 
 .carousel-indicators {
@@ -142,10 +149,6 @@ nav li:hover {
     border: none;
 }
 
-.carousel-control.right {
-    /*z-index: 20;*/
-}
-
 /***** BLOG-POST *****/
 .blog-post {
     width: 825px;
@@ -170,6 +173,17 @@ nav li:hover {
     float: right;
     margin-right: 3%;
     margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.posted > img {
+    width: 40px;
+    margin-right: 5px;
+    margin-top: 2%;
+}
+
+.posted-date {
+    vertical-align: sub;
 }
 
 .blog-post article {
@@ -194,7 +208,7 @@ nav li:hover {
 
 h2 {
     display: inline-block;
-    margin: 25px 0 20px 20px;
+    margin: 20px 0 20px 20px;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -209,14 +223,9 @@ header span {
     vertical-align: super;
 }
 
-footer i {
-    font-size: 1.8em;
-    vertical-align: sub;
-}
-
-.ion-pricetag {
-    margin: 0 8px 0 23px;
-    line-height: 52.5px;
+footer img {
+    width: 35px;
+    margin: 10px 8px 10px 3%;
 }
 
 footer .tags {
