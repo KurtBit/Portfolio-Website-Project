@@ -3,13 +3,16 @@
 <section class="blog-post">
     <header class="clearfix">
         <h2>@Model.Title</h2>
-        <span class="posted"><i class="ion-calendar"></i>Posted at: @Model.CreatedAt</span>
+        <span class="posted">
+            <img src="~/Content/images/calendar.png" alt="Calendar" />
+            <span class="posted-date">Posted at: @Model.CreatedAt</span>
+        </span>
     </header>
     <article>
         @Model.Content
     </article>
     <footer class="clearfix">
-        <i class="ion-pricetag"></i>
+        <img src="~/Content/images/tag.png" alt="Tag"/>
         <div class="tags">books, story, tags</div>
         <div class="mymedia">
             <ul>

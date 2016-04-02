@@ -109,9 +109,44 @@ nav li:hover {
 }
 
 /***** HERO *****/
-#carousel-example-generic {
+#hero-carousel {
     margin-top: 5%;
+}
+
+#hero-carousel img {
     width: 1140px;
+    height: 300px;
+}
+
+#hero-carousel > a > img {
+    height: 38px;
+    width: 46px;
+    position: relative;
+    top: 45%
+}
+
+.carousel-indicators {
+    height: 20px;
+    top: 20px;
+    left: 1050px;
+}
+
+.carousel-indicators li {
+    width: 2.3%;
+    height: 75%;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.carousel-indicators .active {
+    width: 2.3%;
+    height: 75%;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    background-color: rgb(37, 232, 166);
+    border: none;
 }
 
 /***** BLOG-POST *****/
@@ -138,6 +173,17 @@ nav li:hover {
     float: right;
     margin-right: 3%;
     margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.posted > img {
+    width: 40px;
+    margin-right: 5px;
+    margin-top: 2%;
+}
+
+.posted-date {
+    vertical-align: sub;
 }
 
 .blog-post article {
@@ -162,7 +208,7 @@ nav li:hover {
 
 h2 {
     display: inline-block;
-    margin: 25px 0 20px 20px;
+    margin: 20px 0 20px 20px;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -177,14 +223,9 @@ header span {
     vertical-align: super;
 }
 
-footer i {
-    font-size: 1.8em;
-    vertical-align: sub;
-}
-
-.ion-pricetag {
-    margin: 0 8px 0 23px;
-    line-height: 52.5px;
+footer img {
+    width: 35px;
+    margin: 10px 8px 10px 3%;
 }
 
 footer .tags {
