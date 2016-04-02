@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Migrations;
+﻿using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using BlogCMS.Data;
 using BlogCMS.Web.Areas.Admin.InputModel;
@@ -24,11 +21,14 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Index(ProfileInputModel model)
         {
-            var user = context.Users.FirstOrDefault(x => x.IdentityId == User.Identity.GetUserId());// needs to authenticate
+            var user = context.Users.FirstOrDefault(x => x.Id == User.Identity.GetUserId());// needs to authenticate
 
-            user.AvatarUrl = model.AvatarUrl;
+            if (user != null)
+            {
+                user.AvatarUrl = model.AvatarUrl;
 
-            context.Users.AddOrUpdate(user);
+                context.Users.AddOrUpdate(user);
+            }
 
             return View();
         }

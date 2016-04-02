@@ -182,7 +182,6 @@
     </Compile>
     <Compile Include="Models\AboutMeViewModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -432,8 +431,7 @@
     <Content Include="Content\ckeditor\skins\moono\images\refresh.png" />
     <Content Include="Content\ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="Content\ckeditor\styles.js" />
-    <Content Include="Content\images\Guzarisme1.jpg" />
-    <Content Include="Content\images\Idiiot.png" />
+    <Content Include="Content\images\avatar.png" />
     <Content Include="Content\images\Omnifood.png" />
     <Content Include="Content\ionicons.min.css" />
     <Content Include="favicon.ico" />

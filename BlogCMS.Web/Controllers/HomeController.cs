@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using BlogCMS.Data;
-using BlogCMS.Models;
 using BlogCMS.Web.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlogCMS.Web.Controllers
 {
@@ -16,6 +15,10 @@ namespace BlogCMS.Web.Controllers
 
         public ActionResult Index()
         {
+            string currentUserId = User.Identity.GetUserId();
+            var avatarUrl = context.Users.Where(x => x.Role == "Owner").Select(x => x.AvatarUrl).FirstOrDefault();
+            ViewBag.AvatarUrl = avatarUrl;
+
             var posts = context.Posts;
             if (posts != null)
             {
@@ -29,12 +32,7 @@ namespace BlogCMS.Web.Controllers
 
                 return this.View(model);
             }
-            var user = context.Users.FirstOrDefault(x => x.IdentityId == User.Identity.GetUserId());
-
-            ViewData["AvatarUrl"] = user.AvatarUrl;
-
-            return this.View();
-            
+                return this.View();
         }
 
         public ActionResult About()

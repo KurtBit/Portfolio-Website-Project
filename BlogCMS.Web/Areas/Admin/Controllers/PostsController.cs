@@ -26,7 +26,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
             IEnumerable<PostsIndexViewModel> model = posts.Select(x => new PostsIndexViewModel()
             {
                 Author = x.User.Email,
-                Id = x.Id,
+                Id = x.PostId,
                 PostedAt = x.CreatedAt,
                 Tag = x.Slug,
                 Title = x.Title,
@@ -70,7 +70,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
 
         public ActionResult Delete(int id)
         {
-            var post = context.Posts.FirstOrDefault(x => x.Id == id);
+            var post = context.Posts.FirstOrDefault(x => x.PostId == id);
 
             post.IsDeleted = 1;
             post.DeletedAt = DateTime.Now;
@@ -82,7 +82,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
 
         public ActionResult Restore(int id)
         {
-            var post = context.Posts.FirstOrDefault(x => x.Id == id);
+            var post = context.Posts.FirstOrDefault(x => x.PostId == id);
 
             post.IsDeleted = 0;
             post.DeletedAt = DateTime.Now;
