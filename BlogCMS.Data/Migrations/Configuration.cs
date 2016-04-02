@@ -7,6 +7,7 @@ namespace BlogCMS.Data.Migrations
 {
     internal sealed class Configuration : DbMigrationsConfiguration<BlogCMS.Data.BlogContext>
     {
+        
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
@@ -43,7 +44,7 @@ namespace BlogCMS.Data.Migrations
                 AccessFailedCount = 0,
                 Role = "Owner"
             };
-            context.Users.Add(user);
+            context.Users.AddOrUpdate(user);
             context.SaveChanges();
             userManager.AddToRole(user.Id, roles[0]);
         }

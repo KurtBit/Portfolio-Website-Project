@@ -432,7 +432,15 @@
     <Content Include="Content\ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="Content\ckeditor\styles.js" />
     <Content Include="Content\images\avatar.png" />
+    <Content Include="Content\images\blog-post-left.png" />
+    <Content Include="Content\images\blog-post-right.png" />
+    <Content Include="Content\images\calendar.png" />
+    <Content Include="Content\images\carousel-left-transparent.png" />
+    <Content Include="Content\images\carousel-right-transperant.png" />
     <Content Include="Content\images\Omnifood.png" />
+    <Content Include="Content\images\Project1.jpg" />
+    <Content Include="Content\images\Project2.jpg" />
+    <Content Include="Content\images\tag.png" />
     <Content Include="Content\ionicons.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
