@@ -439,9 +439,11 @@
     <Content Include="Content\images\calendar.png" />
     <Content Include="Content\images\carousel-left-transparent.png" />
     <Content Include="Content\images\carousel-right-transperant.png" />
+    <Content Include="Content\images\go-to-website.png" />
     <Content Include="Content\images\Omnifood.png" />
     <Content Include="Content\images\Project1.jpg" />
     <Content Include="Content\images\Project2.jpg" />
+    <Content Include="Content\images\recent_projects1.png" />
     <Content Include="Content\images\tag.png" />
     <Content Include="Content\ionicons.min.css" />
     <Content Include="favicon.ico" />
