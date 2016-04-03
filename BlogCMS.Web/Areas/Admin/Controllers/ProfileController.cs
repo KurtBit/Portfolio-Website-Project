@@ -15,19 +15,29 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = new ProfileInputModel();
+            var user = context.Users.Where(x => x.Role == "Owner").Select(x => x).FirstOrDefault();
+
+            var model = new ProfileInputModel()
+            {
+                AvatarUrl = user.AvatarUrl,
+                AboutMe = user.AboutMe
+            };
+
             return View(model);
         }
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult Index(ProfileInputModel model)
         {
-            var user = context.Users.FirstOrDefault(x => x.Id == User.Identity.GetUserId());// needs to authenticate
+            var userId = User.Identity.GetUserId();
+            var user = context.Users.FirstOrDefault(x => x.Id == userId);// needs to authenticate
 
             if (user != null)
             {
                 user.AvatarUrl = model.AvatarUrl;
-
+                user.AboutMe = model.AboutMe;
                 context.Users.AddOrUpdate(user);
+                context.SaveChanges();
+                return Content("Success");
             }
 
             return View();

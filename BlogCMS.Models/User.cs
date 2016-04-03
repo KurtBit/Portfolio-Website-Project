@@ -25,7 +25,7 @@ namespace BlogCMS.Models
 
         public string FullName { get; set; }
         public string AvatarUrl { get; set; }
-        public string Summary { get; set; }
+        public string AboutMe { get; set; }
         public string Role { get; set; } // temp need to fix RoleManager
 
         public virtual ICollection<Post> Posts

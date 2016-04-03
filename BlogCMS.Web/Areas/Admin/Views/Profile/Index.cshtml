@@ -1,11 +1,37 @@
 ﻿@model BlogCMS.Web.Areas.Admin.InputModel.ProfileInputModel
 
-<div class="row">
-    <div class="col-lg-4">
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <h2>Update Profile</h2>
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         <div class="form-group">
-            @Html.LabelFor(x=>x.AvatarUrl)
-            @Html.EditorFor(x=>x.AvatarUrl)
-            <input type="submit" value="Upload"/>
+            @Html.ValidationMessageFor(model => model.AvatarUrl, "", new {@class = "text-danger"})
+            @Html.LabelFor(x => x.AvatarUrl, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(x => x.AvatarUrl, new {htmlAttributes = new {@class = "control-label col-md-2"}})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.ValidationMessageFor(model => model.AboutMe, "", new {@class = "text-danger"})
+            @Html.LabelFor(x => x.AboutMe, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextAreaFor(x => x.AboutMe, new {htmlAttributes = new {@class = "control-label col-md-2" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-default"/>
+            </div>
         </div>
     </div>
-</div>
+}
+
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace("AboutMe");
+</script>

@@ -1,3 +1,4 @@
+using System;
 using System.Data.Entity.Migrations;
 using BlogCMS.Models;
 using Microsoft.AspNet.Identity;
@@ -5,7 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlogCMS.Data.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<BlogCMS.Data.BlogContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BlogContext>
     {
         
         public Configuration()
@@ -42,11 +43,57 @@ namespace BlogCMS.Data.Migrations
                 PhoneNumberConfirmed = false,
                 TwoFactorEnabled = false,
                 AccessFailedCount = 0,
-                Role = "Owner"
+                Role = "Owner",
+                AboutMe = @"I generally have no problem with the Bootstrap 
+                v.3 and the Telerik bootstrap theme working together. 
+                The key exception in my case is the  form - control class. 
+                For example the controls (drop-downs, auto-completes, etc) 
+                do not wrap below the label as expected on a standard (non-horizontal) form."
             };
             context.Users.AddOrUpdate(user);
             context.SaveChanges();
             userManager.AddToRole(user.Id, roles[0]);
+
+            var post1 = new Post()
+            {
+                Content = @"Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                CreatedAt = DateTime.Now,
+                IsDeleted = 0,
+                Title = "First Post",
+                Slug = "#Programming, #Telerik",
+                UserId = user.Id
+            };
+            context.Posts.AddOrUpdate(post1);
+            context.SaveChanges();
+
+            var post2 = new Post()
+            {
+                Content = @"On the other hand,we denounce with righteous indignation and dislike men who are so beguiled and
+                demoralized by the charms of pleasure of the moment,so blinded by desire,
+                that they cannot foresee the pain and trouble that are bound to ensue; 
+                and equal blame belongs to those who fail in their duty through weakness of will, 
+                which is the same as saying through shrinking from toil and pain.These cases are perfectly 
+                simple and easy to distinguish. In a free hour, when our power of choice is untrammelled 
+                and when nothing prevents our being able to do what we like best, every pleasure is to 
+                be welcomed and every pain avoided. But in certain circumstances and owing to the claims 
+                of duty or the obligations of business it will frequently occur that pleasures have to 
+                be repudiated and annoyances accepted.The wise man therefore always holds in these matters 
+                to this principle of selection: he rejects pleasures to secure other greater pleasures, 
+                or else he endures pains to avoid worse pains.",
+                CreatedAt = DateTime.Now,
+                IsDeleted = 0,
+                Title = "Second Post",
+                Slug = "#Programming, #Telerik",
+                UserId = user.Id
+            };
+            context.Posts.AddOrUpdate(post2);
+            context.SaveChanges();
         }
     }
 }

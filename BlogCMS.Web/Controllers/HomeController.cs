@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using System.Web.Security;
 using BlogCMS.Data;
 using BlogCMS.Web.Models;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlogCMS.Web.Controllers
 {
@@ -17,7 +15,9 @@ namespace BlogCMS.Web.Controllers
         {
             string currentUserId = User.Identity.GetUserId();
             var avatarUrl = context.Users.Where(x => x.Role == "Owner").Select(x => x.AvatarUrl).FirstOrDefault();
+            var aboutMe = context.Users.Where(x => x.Role == "Owner").Select(x => x.AboutMe).FirstOrDefault();
             ViewBag.AvatarUrl = avatarUrl;
+            ViewBag.AboutMe = aboutMe;
 
             var posts = context.Posts;
             if (posts != null)
