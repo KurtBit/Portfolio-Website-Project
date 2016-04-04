@@ -122,7 +122,7 @@ nav li:hover {
     height: 38px;
     width: 46px;
     position: relative;
-    top: 45%
+    top: 135px;
 }
 
 .carousel-indicators {
@@ -258,7 +258,7 @@ footer .mymedia {
     vertical-align: text-top;
     line-height: 30px;
     color: rgb(51, 51, 51);
-    font-size: 0.8em;
+    font-size: 1.5em;
 }
 
 .mymedia li:first-child .social:hover,
@@ -317,6 +317,8 @@ aside {
     color: rgb(135, 138, 137);
     background-color: #fff;
     border: 1px solid rgb(217, 217, 217);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 aside img {
@@ -338,6 +340,7 @@ aside span {
     padding: 4%;
     overflow: auto;
     word-wrap: break-word;
+    height: 145px
 }
 
 .greeting {
@@ -392,11 +395,20 @@ h4 {
     margin-bottom: 1%;
 }
 
+.recent-projects-header:before {
+    position: absolute;
+    content: "";
+    width: 33%;
+    height: 2px;
+    border-bottom: 1px solid #d9d9d9;
+    left: 33%;
+    top: 28%;
+}
+
 .recent-projects-header hr {
     width: 50%;
     background-color: #d9d9d9;
     border-color: #d9d9d9;
-    text-align: left;
 }
 
 /***** RECENT-PROJECTS *****/
@@ -471,16 +483,37 @@ footer.tags p {
     font-family: Arial, sans-serif;
 }
 
-.btn .btn-go-to-website {
+footer > a:link,
+footer > a:visited {
     width: 140px;
     height: 25px;
     margin: 21.5% 21% 0 0;
-    padding-top: 7px;
-    display: inline-block;
-    background-image: url("~/Content/images/go-to-website.png");
+    line-height: 25px;
     font-size: 14px;
     color: #fffefe;
     text-align: center;
     float: right;
     text-decoration: none;
+    background-color: #25e8a6;
+    -webkit-box-shadow: 0 0 0 2px #d9d9d9,
+                inset 1px 1px 0 1px #98f4d5,
+                inset 2px 2px 0 1px #5ceebc,
+                inset -1px -1px 0 1px #093a2a,
+                inset -2px -2px 0 1px #1aa274;
+    -ms-box-shadow: 0 0 0 2px #d9d9d9,
+                inset 1px 1px 0 1px #98f4d5,
+                inset 2px 2px 0 1px #5ceebc,
+                inset -1px -1px 0 1px #093a2a,
+                inset -2px -2px 0 1px #1aa274;
+    box-shadow: 0 0 0 2px #d9d9d9,
+        inset 1px 1px 0 1px #98f4d5,
+        inset 2px 2px 0 1px #5ceebc,
+        inset -1px -1px 0 1px #093a2a,
+        inset -2px -2px 0 1px #1aa274;
+    border-radius: 7px;
+}
+
+footer > a:hover,
+footer > a:active {
+    background-color: #33f9d1;
 }
