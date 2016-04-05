@@ -415,7 +415,7 @@ main {
     display: block;
     width: 960px;
     height: 490px;
-    margin: 0 auto;
+    margin: 0 auto 45% auto;
 }
 
 .img-frame{
@@ -480,8 +480,8 @@ footer > a:link,
 footer > a:visited {
     width: 140px;
     height: 30px;
-    margin: 21.5% 21% 0 0;
-    line-height: 30px;
+    margin: 15% 21% 0 0;
+    line-height: 18px;
     font-size: 14px;
     color: #fffefe;
     text-align: center;
