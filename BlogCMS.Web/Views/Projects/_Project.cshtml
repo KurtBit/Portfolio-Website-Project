@@ -1,0 +1,20 @@
+﻿@model BlogCMS.Web.Models.ProjectsViewModel
+   
+<main class="clearfix">
+    <div class="img-frame">
+        <img src="@Model.ImgFrameUrl" alt="Project image">
+    </div>
+    <div class="recent-projects-content">
+        <header class="content-header">
+            <p class="title">@Model.Title</p>
+            <p class="time-span">Time-span: @Model.TimeSpan</p>
+        </header>
+        <article>
+            @Model.Content
+        </article>
+        <footer class="tags">
+            <p>Type: @Model.Slug</p>
+            <a class="btn btn-go-to-website" href="@Model.Url">Go to website</a>
+        </footer>
+    </div>
+</main>

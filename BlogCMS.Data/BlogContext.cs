@@ -20,6 +20,10 @@ namespace BlogCMS.Data
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Owner> Owner { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Type> Types { get; set; }
+        public DbSet<Skill> Skill { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

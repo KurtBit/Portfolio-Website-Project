@@ -35,19 +35,19 @@
 
     <!-- Controls -->
     <a class="left carousel-control" href="#hero-carousel" role="button" data-slide="prev">
-        <img src="~/Content/images/carousel-left-transparent.png" alt="Left Arrow"/>
+        <img src="~/Content/images/carousel-left-transparent.png" alt="Left Arrow" />
     </a>
     <a class="right carousel-control" href="#hero-carousel" role="button" data-slide="next">
-        <img src="~/Content/images/carousel-right-transperant.png" alt="Right Arrow"/>
+        <img src="~/Content/images/carousel-right-transperant.png" alt="Right Arrow" />
     </a>
 </div>
 
 <div class="row">
     <div class="col-lg-8">
         @foreach (var post in Model)
+        {
+            if (post.isDeleted == 0)
             {
-                if (post.isDeleted == 0)
-                {
                 @Html.Partial("_Post", post)
             }
         }
