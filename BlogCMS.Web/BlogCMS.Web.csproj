@@ -441,7 +441,7 @@
     <Content Include="Content\images\carousel-left-transparent.png" />
     <Content Include="Content\images\carousel-right-transperant.png" />
     <Content Include="Content\images\go-to-website-btn.png" />
-    <Content Include="Content\images\go-to-website.png" />
+    <Content Include="Content\images\go-to-website-hover-btn.png" />
     <Content Include="Content\images\Omnifood.png" />
     <Content Include="Content\images\Project1.jpg" />
     <Content Include="Content\images\Project2.jpg" />

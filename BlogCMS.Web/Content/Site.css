@@ -336,11 +336,10 @@ aside span {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    font-size: 1em;
+    font-size: 0.85em;
     padding: 4%;
-    overflow: auto;
+    overflow: hidden;
     word-wrap: break-word;
-    height: 145px
 }
 
 .greeting {
@@ -402,13 +401,7 @@ h4 {
     height: 2px;
     border-bottom: 1px solid #d9d9d9;
     left: 33%;
-    top: 28%;
-}
-
-.recent-projects-header hr {
-    width: 50%;
-    background-color: #d9d9d9;
-    border-color: #d9d9d9;
+    top: 190px;
 }
 
 /***** RECENT-PROJECTS *****/
@@ -486,34 +479,26 @@ footer.tags p {
 footer > a:link,
 footer > a:visited {
     width: 140px;
-    height: 25px;
+    height: 30px;
     margin: 21.5% 21% 0 0;
-    line-height: 25px;
+    line-height: 30px;
     font-size: 14px;
     color: #fffefe;
     text-align: center;
     float: right;
     text-decoration: none;
-    background-color: #25e8a6;
-    -webkit-box-shadow: 0 0 0 2px #d9d9d9,
-                inset 1px 1px 0 1px #98f4d5,
-                inset 2px 2px 0 1px #5ceebc,
-                inset -1px -1px 0 1px #093a2a,
-                inset -2px -2px 0 1px #1aa274;
-    -ms-box-shadow: 0 0 0 2px #d9d9d9,
-                inset 1px 1px 0 1px #98f4d5,
-                inset 2px 2px 0 1px #5ceebc,
-                inset -1px -1px 0 1px #093a2a,
-                inset -2px -2px 0 1px #1aa274;
-    box-shadow: 0 0 0 2px #d9d9d9,
+    background-image: url("../Content/images/go-to-website-btn.png");
+    /*background-color: #25e8a6;
+    box-shadow: 0 0 0 0.5px #d9d9d9,
         inset 1px 1px 0 1px #98f4d5,
         inset 2px 2px 0 1px #5ceebc,
         inset -1px -1px 0 1px #093a2a,
         inset -2px -2px 0 1px #1aa274;
-    border-radius: 7px;
+    border-radius: 7px;*/
 }
 
 footer > a:hover,
 footer > a:active {
-    background-color: #33f9d1;
+    background-image: url("../Content/images/go-to-website-hover-btn.png");
+    /*background-color: #33f9d1;*/
 }
