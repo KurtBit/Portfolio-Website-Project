@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace BlogCMS.Web.Areas.Admin.InputModel
 {
-    public class NewPostInputModel
+    public class PostInputModel
     {
-        public NewPostInputModel()
+        public PostInputModel()
         {
             Title = "Insert Title Here";
         }

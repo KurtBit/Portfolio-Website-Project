@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 
 namespace BlogCMS.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private BlogContext context = new BlogContext();
