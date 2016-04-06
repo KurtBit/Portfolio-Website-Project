@@ -9,6 +9,9 @@
     </header>
     @foreach (var project in Model)
     {
-        @Html.Partial("_Project", project)
+        if (project.IsDeleted != 1)
+        {
+           @Html.Partial("_Project", project)
+        }
     }
 </div>

@@ -21,11 +21,13 @@ namespace BlogCMS.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string Slug { get; set; }
-        public DateTime TimeSpan { get; set; }
+        public TimeSpan? TimeSpan { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public DateTime? DeletedAt { get; set; }
         public string Url { get; set; }
         public string ImgFrameUrl { get; set; }
+        public int IsDeleted { get; set; }
 
         public virtual ICollection<Type> Types
         {

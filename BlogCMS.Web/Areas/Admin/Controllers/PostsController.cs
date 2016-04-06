@@ -23,7 +23,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
         {
             var posts = context.Posts;
 
-            IEnumerable<PostsIndexViewModel> model = posts.Select(x => new PostsIndexViewModel()
+            IEnumerable<PostsViewModel> model = posts.Select(x => new PostsViewModel()
             {
                 Author = x.User.Email,
                 Id = x.PostId,
@@ -39,33 +39,33 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult New()
         {
-            var model = new NewPostInputModel();
+            var model = new PostInputModel();
 
             return View(model);
         }
 
         [HttpPost, ValidateAntiForgeryToken, ValidateInput(false)]
-        public ActionResult New(NewPostInputModel model)
+        public ActionResult New(PostInputModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                var post = new Post()
+                {
+                    Content = model.Content,
+                    CreatedAt = DateTime.Now,
+                    Title = model.Title,
+                    Slug = model.Slug,
+                    UserId = User.Identity.GetUserId(),
+                    IsDeleted = 0
+                };
+
+                context.Posts.Add(post);
+                context.SaveChanges();
+
+                return Content("Added Post Successfully");
             }
 
-            var post = new Post()
-            {
-                Content = model.Content,
-                CreatedAt = DateTime.Now,
-                Title = model.Title,
-                Slug = model.Slug,
-                UserId = User.Identity.GetUserId(),
-                IsDeleted = 0
-            };
-
-            context.Posts.Add(post);
-            context.SaveChanges();
-           
-            return Content("Added Post Successfully");
+            return View(model);
         }
 
         public ActionResult Delete(int id)
@@ -76,7 +76,7 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
             post.DeletedAt = DateTime.Now;
             context.Posts.AddOrUpdate(post);
             context.SaveChanges();
-            
+
             return RedirectToAction("Index");
         }
 

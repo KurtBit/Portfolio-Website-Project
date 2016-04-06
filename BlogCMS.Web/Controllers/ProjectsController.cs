@@ -26,7 +26,9 @@ namespace BlogCMS.Web.Controllers
                     Slug = x.Slug,
                     TimeSpan = x.TimeSpan,
                     Url = x.Url,
-                    ImgFrameUrl = x.ImgFrameUrl
+                    ImgFrameUrl = x.ImgFrameUrl,
+                    IsDeleted = x.IsDeleted
+                    
                 });
 
                 return this.View(model);

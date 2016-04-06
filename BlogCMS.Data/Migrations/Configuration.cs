@@ -49,7 +49,8 @@ namespace BlogCMS.Data.Migrations
                 v.3 and the Telerik bootstrap theme working together. 
                 The key exception in my case is the  form - control class. 
                 For example the controls (drop-downs, auto-completes, etc) 
-                do not wrap below the label as expected on a standard (non-horizontal) form."
+                do not wrap below the label as expected on a standard (non-horizontal) form.",
+                FullName = "Petromil Pavlov"
             };
             context.Users.AddOrUpdate(user);
             context.SaveChanges();
@@ -132,8 +133,9 @@ namespace BlogCMS.Data.Migrations
                     OwnerId = owner.OwnerId,
                     Url = @"https://www.youtube.com/watch?v=fmI_Ndrxy14",
                     ImgFrameUrl = "/Content/images/recent_projects1.png",
-                    TimeSpan = DateTime.Now,
-                    Title = "Amazing Project Title"
+                    TimeSpan = null,
+                    Title = "Amazing Project Title",
+                    IsDeleted = 0
                 }
             };
             foreach (var project in projects)
