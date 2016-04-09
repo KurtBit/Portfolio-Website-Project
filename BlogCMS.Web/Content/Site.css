@@ -544,5 +544,101 @@ footer > a:active {
     color: #000;
 }
 /****************************************************/
-/*********************BOOTSTRAP**********************/
+/********************SKILLS-PAGE*********************/
 /****************************************************/
+.skills-wrapper {
+    height: 100%;
+    background-color: #f2f2f2;
+    color: #828080;
+}
+/*****HEADER*****/
+.skill-name {
+    box-sizing: border-box;
+    margin: 39px 120px;
+    width: 893px;
+    height: 70px;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: 400;
+    padding-left: 360px;
+    line-height: 70px;
+}
+
+.skill-name > img {
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+/*****SKILL LIST*****/
+.skill-type {
+    list-style: none;
+}
+
+.skill-list li {
+    width: 893px;
+    height: 110px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.skill-list li:last-of-type {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 1%;
+}
+
+.skill-list li img {
+    float: left;
+    height: 100px;
+}
+
+.started-time {
+    float: right;
+    font-size: 1.1em;
+    line-height: 85px;
+}
+
+.started-time p {
+    display: inline-block;
+}
+
+.started-time span {
+    color: #25e8a6;
+}
+
+.num-of-projects {
+    font-size: 1em;
+    padding-left: 360px
+}
+
+.num-of-projects p {
+    display: inline-block;
+}
+
+.num-of-projects span {
+    color: #25e8a6;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 70%;
+    margin: 35px 20px 0 19px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #25e8a6;
+}
+
+progress[value]::-moz-progress-bar {
+    background-color: #25e8a6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
