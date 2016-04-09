@@ -54,7 +54,11 @@ h1 {
 
 nav {
     font-size: 15px;
-    background-color: rgb(37, 232, 166)
+    background: linear-gradient(to bottom, 
+        rgba(37,232,166,1) 0%,
+        rgba(2,118,68,1) 50%,
+        rgba(2,118,68,1) 51%,
+        rgba(37,232,166,1) 100%); 
 }
 
 nav > ul {
@@ -357,11 +361,15 @@ aside span {
 .main-footer {
     height: 130px;
     width: 100%;
-    background-color: rgb(37, 232, 166);
     font-family: Arial, sans-serif;
     font-size: 1.3em;
     text-align: center;
     margin-top: 130px;
+        background: linear-gradient(to bottom, 
+        rgba(37,232,166,1) 0%,
+        rgba(2,118,68,1) 50%,
+        rgba(2,118,68,1) 51%,
+        rgba(37,232,166,1) 100%); 
 }
 
 .main-footer span {
@@ -507,7 +515,34 @@ footer > a:active {
     color: #878a89;
     /*background-color: #33f9d1;*/
 }
+/*Projects Carousel*/
+#projects-carousel .carousel-inner img {
+    height: 297px;
+    width: 700px;
+}
 
+#projects-carousel .carousel-nav {
+    border: 1px solid #000;
+    position: relative;
+    top: 40px;
+    width: 50%;
+    height: 40px;
+    left: 160px;
+}
+
+#projects-carousel ol {
+    left: 170px;
+    top: 10px
+}
+
+#projects-carousel li {
+    width: 15px;
+    border-radius: 2px
+}
+
+#projects-carousel li.active {
+    color: #000;
+}
 /****************************************************/
 /*********************BOOTSTRAP**********************/
 /****************************************************/

@@ -445,6 +445,8 @@
     <Content Include="Content\images\HomePage imgs\carousel-right-transperant.png" />
     <Content Include="Content\images\ProjectsPage imgs\go-to-project-btn.png" />
     <Content Include="Content\images\ProjectsPage imgs\go-to-website-hover-btn.png" />
+    <Content Include="Content\images\ProjectsPage imgs\projects-carousel-arrow-left.png" />
+    <Content Include="Content\images\ProjectsPage imgs\projects-carousel-arrow-right.png" />
     <Content Include="Content\images\Projects\Omnifood.png" />
     <Content Include="Content\images\Projects\Project1.jpg" />
     <Content Include="Content\images\Projects\Project2.jpg" />
@@ -528,7 +530,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Portfolio.cshtml" />
+    <Content Include="Views\Home\Skills.cshtml" />
     <Content Include="Views\Home\_Post.cshtml" />
     <Content Include="Views\Home\_AboutMe.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />

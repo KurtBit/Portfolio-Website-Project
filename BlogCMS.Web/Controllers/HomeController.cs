@@ -49,7 +49,7 @@ namespace BlogCMS.Web.Controllers
             return View();
         }
 
-        public ActionResult Portfolio()
+        public ActionResult Skills()
         {
             ViewBag.Message = "Your portfolio page.";
 
