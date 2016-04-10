@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using BlogCMS.Data;
@@ -45,13 +45,6 @@ namespace BlogCMS.Web.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult Skills()
-        {
-            ViewBag.Message = "Your portfolio page.";
 
             return View();
         }

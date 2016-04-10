@@ -172,15 +172,18 @@
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProjectsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SkillsController.cs" />
     <Compile Include="Areas\Admin\InputModel\PostInputModel.cs" />
     <Compile Include="Areas\Admin\InputModel\ProfileInputModel.cs" />
     <Compile Include="Areas\Admin\InputModel\ProjectInputModel.cs" />
+    <Compile Include="Areas\Admin\InputModel\SkillInputModel.cs" />
     <Compile Include="Areas\Admin\Models\PostsViewModel.cs" />
     <Compile Include="Areas\Admin\Models\ProjectsViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -482,6 +485,7 @@
     <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Projects\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Projects\New.cshtml" />
+    <Content Include="Areas\Admin\Views\Skills\Index.cshtml" />
     <None Include="Properties\PublishProfiles\ppavlov - Web Deploy.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -530,11 +534,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Skills.cshtml" />
     <Content Include="Views\Home\_Post.cshtml" />
     <Content Include="Views\Home\_AboutMe.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Projects\_Project.cshtml" />
+    <Content Include="Views\Skills\Index.cshtml" />
+    <Content Include="Views\Skills\Back-End\_BackEnd.cshtml" />
+    <Content Include="Views\Skills\Front-End\_FrontEnd.cshtml" />
+    <Content Include="Views\Skills\Graphics\_Graphics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

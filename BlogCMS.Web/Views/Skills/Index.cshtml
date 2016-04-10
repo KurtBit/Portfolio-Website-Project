@@ -1,0 +1,11 @@
+@{
+    ViewBag.Title = "Skills";
+}
+
+<div class="skills-wrapper">
+    <ul class="skill-type">
+        @{ Html.RenderPartial("Back-End/_BackEnd");     }
+        @{ Html.RenderPartial("Front-End/_FrontEnd");   }
+        @{ Html.RenderPartial("Graphics/_Graphics");    }
+    </ul>
+</div>
