@@ -31,8 +31,8 @@ namespace BlogCMS.Web.Areas.Admin.Controllers
                     KnowledgeLevel = model.KnowledgeLevel,
                     SkillName = model.SkillName,
                     StartedAt = model.StartedAt,
-                    Type = model.Type,
-                    OwnedId = owner.OwnerId
+                    //Type = model.Type,
+                    //OwnedId = owner.OwnerId
                 };
                 return Content("Success");
             }

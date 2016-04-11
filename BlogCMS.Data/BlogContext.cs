@@ -23,13 +23,15 @@ namespace BlogCMS.Data
         public DbSet<Owner> Owner { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Type> Types { get; set; }
-        public DbSet<Skill> Skill { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<SkillType> SkillTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
             modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
             modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
+            //modelBuilder.Entity<SkillTypes>().HasRequired(p => p.Owner).WithMany().HasForeignKey(p => p.OwnerId);
         }
     }
 }

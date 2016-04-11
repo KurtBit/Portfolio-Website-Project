@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlogCMS.Models
 {
     public class Owner
     {
         private ICollection<Project> _projects;
-        private ICollection<Skill> _skills;
 
         public Owner()
         {
             this._projects = new HashSet<Project>();
-            this._skills = new HashSet<Skill>();
         }
 
         [Key]
@@ -29,11 +28,6 @@ namespace BlogCMS.Models
         {
             get { return this._projects; }
             set { this._projects = value; }
-        }
-        public virtual ICollection<Skill> Skills
-        {
-            get { return this._skills; }
-            set { this._skills = value; }
         }
     }
 }

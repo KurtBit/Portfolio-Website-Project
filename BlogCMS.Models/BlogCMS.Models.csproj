@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\SkillType.cs" />
+    <Compile Include="SkillType.cs" />
     <Compile Include="Type.cs" />
     <Compile Include="Owner.cs" />
     <Compile Include="Post.cs" />

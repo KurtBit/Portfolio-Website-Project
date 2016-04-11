@@ -1,5 +1,4 @@
 using System;
-using BlogCMS.Models.Enum;
 
 
 namespace BlogCMS.Web.Areas.Admin.InputModel
@@ -13,7 +12,7 @@ namespace BlogCMS.Web.Areas.Admin.InputModel
 
         public string SkillName { get; set; }
         public DateTime StartedAt { get; set; }
-        public SkillType Type { get; set; } 
+        //public SkillTypes Type { get; set; } 
         public int KnowledgeLevel { get; set; }
         public string AvatarUrl { get; set; }
     }
