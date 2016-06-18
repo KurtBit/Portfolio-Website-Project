@@ -12,7 +12,7 @@ using Microsoft.AspNet.Identity;
 
 namespace BlogCMS.Web.Areas.Admin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class PostsController : Controller
     {
         private BlogContext context = new BlogContext();

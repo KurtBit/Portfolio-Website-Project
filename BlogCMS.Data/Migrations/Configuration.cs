@@ -16,6 +16,7 @@ namespace BlogCMS.Data.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
+        
         protected override void Seed(BlogContext context)
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));

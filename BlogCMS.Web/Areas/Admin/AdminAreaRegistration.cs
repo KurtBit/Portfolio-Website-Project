@@ -14,11 +14,6 @@ namespace BlogCMS.Web.Areas.Admin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
-            //context.MapRoute(
-            //    "Admin_default",
-            //    "Admin/{controller}/{action}/{id}",
-            //    new { action = "Index", id = UrlParameter.Optional }
-            //);
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
@@ -26,6 +21,5 @@ namespace BlogCMS.Web.Areas.Admin
                 new[] { "BlogCMS.Web.Areas.Admin.Controllers" }
             );
         }
-
     }
 }

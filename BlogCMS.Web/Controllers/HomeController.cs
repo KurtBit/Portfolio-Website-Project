@@ -1,12 +1,12 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using BlogCMS.Data;
-using BlogCMS.Web.Models;
-using Microsoft.AspNet.Identity;
-
 namespace BlogCMS.Web.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+    using Data;
+    using Models;
+    using Microsoft.AspNet.Identity;
+
     public class HomeController : Controller
     {
         private BlogContext context = new BlogContext();
@@ -14,6 +14,7 @@ namespace BlogCMS.Web.Controllers
         public ActionResult Index()
         {
             string currentUserId = User.Identity.GetUserId();
+
             var avatarUrl = context.Users.Where(x => x.Role == "Owner").Select(x => x.AvatarUrl).FirstOrDefault();
             var aboutMe = context.Users.Where(x => x.Role == "Owner").Select(x => x.AboutMe).FirstOrDefault();
             ViewBag.AvatarUrl = avatarUrl;
@@ -22,6 +23,7 @@ namespace BlogCMS.Web.Controllers
             var posts = context.Posts;
             if (posts != null)
             {
+                
                 IEnumerable<PostViewModel> model = posts.Select(x => new PostViewModel()
                 {
                     Content = x.Content,
@@ -30,9 +32,17 @@ namespace BlogCMS.Web.Controllers
                     isDeleted = x.IsDeleted
                 });
 
+                //var bla = posts.Select(x => new hmm ? 
+                //{
+                //    Content = x.Content,
+                //    CreatedAt = x.CreatedAt,
+                //    Title = x.Title,
+                //    isDeleted = x.IsDeleted
+                //});
+
                 return this.View(model);
             }
-                return this.View();
+            return this.View();
         }
 
         public ActionResult About()

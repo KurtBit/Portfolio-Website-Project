@@ -82,7 +82,6 @@ nav li {
 nav li:first-of-type {
     border-left: 2px solid rgb(217, 217, 217);
     box-shadow:0 0 0 2px #fff;
-    margin-left: 10%;
 }
 
 nav li:last-of-type {
@@ -633,4 +632,9 @@ progress[value]::-webkit-progress-value {
 progress[value]::-moz-progress-bar {
     background-color: #25e8a6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.jumbotron {
+    padding: 0;
+    height: 400px;
 }

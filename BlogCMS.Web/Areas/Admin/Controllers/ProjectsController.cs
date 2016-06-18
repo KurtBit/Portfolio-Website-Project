@@ -10,7 +10,7 @@ using BlogCMS.Web.Areas.Admin.Models;
 
 namespace BlogCMS.Web.Areas.Admin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ProjectsController : Controller
     {
         private BlogContext context = new BlogContext();
