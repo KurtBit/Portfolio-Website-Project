@@ -54,11 +54,7 @@ h1 {
 
 nav {
     font-size: 15px;
-    background: linear-gradient(to bottom, 
-        rgba(37,232,166,1) 0%,
-        rgba(2,118,68,1) 50%,
-        rgba(2,118,68,1) 51%,
-        rgba(37,232,166,1) 100%); 
+    background: #25E8A6;
 }
 
 nav > ul {
@@ -365,11 +361,7 @@ aside span {
     font-size: 1.3em;
     text-align: center;
     margin-top: 130px;
-        background: linear-gradient(to bottom, 
-        rgba(37,232,166,1) 0%,
-        rgba(2,118,68,1) 50%,
-        rgba(2,118,68,1) 51%,
-        rgba(37,232,166,1) 100%); 
+    background: #25E8A6;
 }
 
 .main-footer span {
